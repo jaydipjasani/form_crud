@@ -1,0 +1,45 @@
+.main {
+  text-align: center;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+  width: 307px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+label {
+  font-size: large;
+}
+
+.tabledata {
+  display: inline-table;
+  margin: 20px;
+}
+
+span {
+  color: red;
+  padding-bottom: 10px;
+}
+
+th {
+  padding: 10px;
+}
+
+.displayrow {
+  display: block;
+}
+
+.radio {
+  width: auto;
+  margin: 10px;
+}
+
+.inputfield {
+  margin-left: 60px;
+}
