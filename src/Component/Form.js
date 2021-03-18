@@ -43,9 +43,7 @@ const Form = (props) => {
         }
     }
 
-    const handleradio = () => {
 
-    }
 
     const deleteUpdateId = () => {
         let localstoragData = JSON.parse(localStorage.getItem('userData'));
@@ -87,9 +85,9 @@ const Form = (props) => {
                 </label>
 
                 <label className="displayrow">Gender :
-                    <input className="radio" name="gender" type="radio" value="Male" onChange={handleradio} ref={register({ required: true })} />Male
-                    <input className="radio" name="gender" type="radio" value="Female" onChange={handleradio} ref={register({ required: true })} />Female
-                    <input className="radio" name="gender" type="radio" value="Other" onChange={handleradio} ref={register({ required: true })} />Other<br></br>
+                    <input className="radio" name="gender" type="radio" value="Male" ref={register({ required: true })} />Male
+                    <input className="radio" name="gender" type="radio" value="Female" ref={register({ required: true })} />Female
+                    <input className="radio" name="gender" type="radio" value="Other" ref={register({ required: true })} />Other<br></br>
                     {errors.gender && <span>**Please Select Gender</span>}
                 </label>
 
