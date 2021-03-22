@@ -11,6 +11,7 @@ const Form = (props) => {
             defaultValues: selectData ? selectData : ""
         }
     );
+    
     const [state, setstate] = useState()
 
     const password = useRef({});
@@ -61,7 +62,6 @@ const Form = (props) => {
             <form onSubmit={handleSubmit(submitData)}>
                 <label className="displayrow">First Name :
                 <input className="inputfield" type="text" name="fname" autoComplete="off"
-                        // value={user && user.fname}
                         defaultValue={selectData && selectData.fname}
                         ref={register({ pattern: /^[a-zA-Z]+$/, required: '**Please Enter First Name' })}
                         placeholder="Enter First Name"></input><br></br>
@@ -109,13 +109,6 @@ const Form = (props) => {
                         ref={register({ required: true })} /><br></br>
                     {errors.address && <span>**Please Enter Address</span>}
                 </label>
-
-                {/* <label className="displayrow">Profile :
-                <input type="file" name="profile"
-                        // defaultValue={selectData && selectData.profile}
-                        ref={register({ required: true })} /><br></br>
-                    {errors.profile && <span>**Please Select Profile Picture</span>}
-                </label> */}
 
                 <label>Password
                 <input className="inputfield"

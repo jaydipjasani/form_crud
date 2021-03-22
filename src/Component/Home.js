@@ -5,7 +5,6 @@ import Slider3 from "../img/slider3.jpg"
 
 const Home = () => {
     return (
-        // <div className="container">
         <div className="py-4">
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
@@ -34,7 +33,6 @@ const Home = () => {
                 </a>
             </div>
         </div>
-        // </div>
     )
 }
 
