@@ -17,7 +17,7 @@ const Form = (props) => {
     const password = useRef({});
     password.current = watch("password", "");
 
-    console.log("selectData", selectData);
+   
     // Declare state to store input value in Array
 
     useEffect(() => {
@@ -35,7 +35,7 @@ const Form = (props) => {
         const localstoragData = localStorage.getItem('userData')
         data.id = Math.random().toString().substr(9, 4);
 
-        if (localstoragData && JSON.parse(localstoragData).length) {
+        if (localstoragData.length) {
             const newdata = [...JSON.parse(localstoragData)]
             newdata.push(data)
             localStorage.setItem('userData', JSON.stringify(newdata))
@@ -95,10 +95,10 @@ const Form = (props) => {
 
                 <label className="displayrow">City :
                 <select name="city" ref={register({ required: true })}>
-                        <option selected={selectData && selectData.city === "Surat" ? true : false} value="Surat">Surat</option>
-                        <option selected={selectData && selectData.city === "Mumbai" ? true : false} value="Mumbai"> Mumbai</option>
-                        <option selected={selectData && selectData.city === "Delhi" ? true : false} value="Delhi"> Delhi</option>
-                        <option selected={selectData && selectData.city === "Ahmedabad" ? true : false} value="Ahmedabad"> Ahmedabad</option>
+                        <option defaultValue={selectData && selectData.city === "Surat" ? true : false} value="Surat">Surat</option>
+                        <option defaultValue={selectData && selectData.city === "Mumbai" ? true : false} value="Mumbai"> Mumbai</option>
+                        <option defaultValue={selectData && selectData.city === "Delhi" ? true : false} value="Delhi"> Delhi</option>
+                        <option defaultValue={selectData && selectData.city === "Ahmedabad" ? true : false} value="Ahmedabad"> Ahmedabad</option>
                     </select><br></br>
                     {errors.city && <span>**Please Select City</span>}
                 </label>
